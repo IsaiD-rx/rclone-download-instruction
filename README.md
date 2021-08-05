@@ -5,19 +5,19 @@
 
    * Open a terminal window (**terminal 1**). After installing rclone on the server, type `rclone config`, you will see something like this:
 
-     <img src="img/pic1.png" style="zoom:50%;" />
+     ![](img/pic1.png)
 
      Choose `n`. If you do not have a remote before, you will not see those ‘current remotes’ things.
 
    * Then you need to input the remote name. Here we use ‘drive’. After inputting the name, and you will see something like this: 
 
-     <img src="img/pic2.png" style="zoom:30%;" />
+     ![](img/pic2.png)
 
      We are using Google drive, so input `15`. 
 
    * Then you will see the request for client_id and client_secret. 
 
-     <img src="img/pic3.png" alt="Screen Shot 2021-08-05 at 12.06.19 AM" style="zoom:40%;" />
+     ![](img/pic3.png)
 
      The client_id and client_secret should be created following the instructions: https://rclone.org/drive/#making-your-own-client-id
 
@@ -25,7 +25,7 @@
 
    * After you input the client_id and client_secret, you should see the option to set the scope that rclone uses. 
 
-     <img src="img/pic4.png" style="zoom:40%;" />
+     ![](img/pic4.png)
 
    * You should see the request for ‘root_folder_id’. Just press enter and leave this blank.
 
@@ -33,17 +33,17 @@
 
    * You should see this. Type `n`.
 
-     <img src="img/pic5.png" style="zoom:40%;" />
+     ![](img/pic5.png)
 
    * You should see the question `Use auto config?`. Choose `n`. 
 
-     <img src="img/pic6.png" style="zoom:50%;" />
+     ![](img/pic6.png)
 
    * Then, a link would be given to get a verification code.
 
    * You will be asked: it will ask whether to configure this as a Shared Drive.
 
-     <img src="img/pic7.png" style="zoom:50%;" />
+     ![](img/pic7.png)
 
      We say no (`n`) here.
 
