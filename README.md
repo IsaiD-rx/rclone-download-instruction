@@ -20,6 +20,7 @@
      <img src="img/pic3.png" alt="Screen Shot 2021-08-05 at 12.06.19 AM" style="zoom:40%;" />
 
      The client_id and client_secret should be created following the instructions: https://rclone.org/drive/#making-your-own-client-id
+
      Please make sure that the Google account used to create the client_id and client_secret is a generic account.
 
    * After you input the client_id and client_secret, you should see the option to set the scope that rclone uses. 
@@ -38,7 +39,7 @@
 
      <img src="img/pic6.png" style="zoom:50%;" />
 
-   * The, a link would be given to get a verification code.
+   * Then, a link would be given to get a verification code.
 
    * You will be asked: it will ask whether to configure this as a Shared Drive.
 
