@@ -1,20 +1,32 @@
-# Optional - Locally install a pre-compiled binary of rclone
+# Setup the shared folder
 
-`curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip`
+1. Request the access to the shared file using **a generic Google account**. 
 
-`unzip rclone-current-linux-amd64.zip`
+2. After obtaining access, go to your Google Drive using your browser.
+In the left panel of the web page, click on "Shared with me", and
+you should see the shared folder show up.
 
-`cd rclone-*-linux-amd64`
+3. Right-click on the shared folder, then select "Add shortcut to Drive" 
+and choose a suitable location under "My Drive". *Remember this location.*
 
-After this, rclone can be invoked by referring to its full or relative path `./rclone`
 
-# Setup the shared directory
+# Install rclone
 
-1. Request the access to the shared file using **a generic account**. 
+If your system does not come with `rclone` already, and you do not
+have permission to install packages globally, then you can install `rclone`
+locally to your home directory.
 
-2. After having the access, go to the Google account,  and you should find the shared file under ''shared with me''. 
+To do so, you can download a pre-compiled binary (x86_64) of `rclone` by
 
-3. Right-click on the shared file, then select "Add shortcut to Drive" and choose a suitable location.
+```
+curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
+unzip rclone-current-linux-amd64.zip
+cd rclone-*-linux-amd64
+```
+
+After this, rclone can be invoked using its full or relative path,
+such as `./rclone`.
+
 
 # Configuring rclone for gdrive  
 
@@ -42,6 +54,7 @@ After this, rclone can be invoked by referring to its full or relative path `./r
      Choose `n`. If you do not have a remote before, you will not see those ‘current remotes’ things.
 
    * Then you need to input the remote name. Here we use ‘drive’. After inputting the name, and you will see something like this: 
+
       ```
       13 / FTP Connection
          \ "ftp"
@@ -203,7 +216,9 @@ After this, rclone can be invoked by referring to its full or relative path `./r
    * Open a new terminal window (**terminal 2**) and `cd drive`
      to navigate to the remote drive.
 
-   * You should be able to see all the files,including the shared file, in the remote drive by `ls`.
+   * You should be able to see all your Google Drive files,
+   including the shortcut to the shared folder at the location you had 
+   chosen above, in the remote drive by `ls`.
 
 3. Download the files from the remote Google drive using `rsync`:
 
@@ -211,13 +226,19 @@ After this, rclone can be invoked by referring to its full or relative path `./r
      Create a directory to store the data by `mkdir local`
      (or any name you like).
 
-   * You can now download the data using the command `rsync -auv drive local`.
+   * Suppose you had created the shortcut to the shared folder in your Google
+   Drive at `shared` and the foler that we shared with you is named `project`,
+   then you can now download the data using the command
+   `rsync -auv drive/shared/project local`.
+   Please be sure to replace `drive/shared/project` with the actual path to
+   your shared folder.
 
 
 ## Remarks
 
 You keep to keep the remote `drive` mounted while you are downloading.
-If your connection is interrupted, you would need to re-mount the 'drive' folder:
+If you terminate `rclone` or if your connection is interrupted,
+you would need to re-mount the `drive` folder:
 
 * First, cleanly unmount the remote drive by `fusermount -uz gdrive`.
 
