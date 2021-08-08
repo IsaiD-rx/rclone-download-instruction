@@ -234,9 +234,10 @@ such as `./rclone`.
 If you terminate `rclone` or if your connection is interrupted,
 you would need to re-mount the `drive` folder:
 
-* First, cleanly unmount the remote drive by `fusermount -uz gdrive`.
 
-* Then, re-mount the drive by `rclone mount gdrive: drive`. 
+   * First, cleanly unmount the remote drive by `fusermount -uz gdrive`.
+
+   * Then, re-mount the drive by `rclone mount gdrive: drive`. 
 
 2. During the download, you might get errors as "User Rate Limit Exceeded". 
 That means you are reaching or exceeding your destination Google Drive account's API quota. 
