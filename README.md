@@ -1,4 +1,4 @@
-# Locally install a pre-compiled binary of rclone
+# Optional - Locally install a pre-compiled binary of rclone
 
 `curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip`
 
@@ -8,7 +8,13 @@
 
 After this, rclone can be invoked by referring to its full or relative path `./rclone`
 
+# Setup the shared directory
 
+1. Request the access to the shared file using **a generic account**. 
+
+2. After having the access, go to the Google account,  and you should find the shared file under ''shared with me''. 
+
+3. Right-click on the shared file, then select "Add shortcut to Drive" and choose a suitable location.
 
 # Configuring rclone for gdrive  
 
