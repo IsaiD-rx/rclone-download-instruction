@@ -238,3 +238,7 @@ you would need to re-mount the `drive` folder:
 
 * Then, re-mount the drive by `rclone mount gdrive: drive`. 
 
+During the download, you might get errors as "User Rate Limit Exceeded". 
+That means you are reaching or exceeding your destination Google Drive account's API quota. 
+These quotas usually reset **after a 24 hour period**, and download can be continued.
+
