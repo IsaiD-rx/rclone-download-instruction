@@ -200,12 +200,6 @@ such as `./rclone`.
 
 2. Mount the remote Google drive on the machine:
 
-   * Request the access to the shared file using your generic account. 
-   
-   * After having the access, go to the Google account,  and you should find the shared file under ''shared with me''. 
-   
-   * Right-click on the shared file, then select "Add shortcut to Drive" and choose a suitable location.
-  
    * Create a directory by `mkdir drive` (or any name you like).
 
    * Then, mount the directory using command `rclone mount gdrive: drive`.
